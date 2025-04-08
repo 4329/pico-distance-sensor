@@ -235,7 +235,7 @@ int main()
                 values[2] = ((i2cBuffer[6] & 0xFF) | ((i2cBuffer[7] & 0xFF) << 8) | ((i2cBuffer[8] & 0xFF) << 16)) & 0x03FFFF;
                 values[1] = ((i2cBuffer[9] & 0xFF) | ((i2cBuffer[10] & 0xFF) << 8) | ((i2cBuffer[11] & 0xFF) << 16)) & 0x03FFFF;
                 values[0] = ((i2cBuffer[12] & 0xFF) | ((i2cBuffer[13] & 0xFF) << 8) | ((i2cBuffer[14] & 0xFF) << 16)) & 0x03FFFF;
-                //flash(values[0]);
+                // flash(values[0]);
             }
         } else {
             flash(1000);
@@ -264,7 +264,7 @@ int main()
         // uart_puts(uart0, outputBuffer);
 
         // flash(values[0]);
-        gpio_put(14, values[0] < 100);
+        gpio_put(14, values[0] < 55);
 
         sleep_until(loopTime);
     }
